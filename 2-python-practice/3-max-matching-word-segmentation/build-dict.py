@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import sys
 import cPickle as pickle
+import json
 wordcount={}
 
 if __name__=="__main__":
@@ -17,4 +18,4 @@ if __name__=="__main__":
             wordcount[word]+=1
 
     vocab = set([k for k in wordcount if wordcount[k]>2])
-    pickle.dump(vocab, open(sys.argv[2], "w"))
+    pickle.dump(vocab, open(sys.argv[2], "wb"))
